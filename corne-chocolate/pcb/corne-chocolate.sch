@@ -612,21 +612,6 @@ F 3 "" H 1950 3300 50  0001 C CNN
 	1    1950 3300
 	1    0    0    -1  
 $EndComp
-Text GLabel 1100 1200 0    47   Input ~ 0
-LED
-Text GLabel 1100 1300 0    47   Input ~ 0
-data
-$Comp
-L Device:Jumper JP1
-U 1 1 5A7600BC
-P 3600 3375
-F 0 "JP1" H 3600 3525 50  0000 C CNN
-F 1 " " H 3600 3295 50  0000 C CNN
-F 2 "kbd:JPC2" H 3600 3375 50  0001 C CNN
-F 3 "" H 3600 3375 50  0001 C CNN
-	1    3600 3375
-	-1   0    0    1   
-$EndComp
 $Comp
 L power:VCC #PWR08
 U 1 1 5A76093E
@@ -649,8 +634,6 @@ F 3 "" H 3100 3425 50  0001 C CNN
 	1    3100 3425
 	1    0    0    -1  
 $EndComp
-Text GLabel 3900 3375 2    60   Input ~ 0
-data
 Text GLabel 2500 1400 2    47   Input ~ 0
 reset
 Text GLabel 1350 3300 0    60   Input ~ 0
@@ -887,7 +870,6 @@ F 3 "" H 6825 6575 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 2500 2300
-NoConn ~ 1100 2300
 Text GLabel 2500 1600 2    47   Input ~ 0
 col0
 NoConn ~ 2500 2200
@@ -1383,13 +1365,6 @@ Wire Wire Line
 	6100 900  6100 1050
 Wire Wire Line
 	5400 900  5400 1050
-Wire Wire Line
-	1000 1400 1000 1500
-Connection ~ 1000 1500
-Wire Wire Line
-	1100 1400 1000 1400
-Wire Wire Line
-	900  1500 1000 1500
 Connection ~ 8900 1050
 Connection ~ 8200 1050
 Connection ~ 6800 1050
@@ -1816,8 +1791,6 @@ Wire Wire Line
 Wire Wire Line
 	1500 4300 1950 4300
 Wire Wire Line
-	1000 1500 1100 1500
-Wire Wire Line
 	8900 1050 8900 1650
 Wire Wire Line
 	8200 1050 8200 1650
@@ -1965,4 +1938,205 @@ Wire Wire Line
 	5825 3975 6625 3975
 Wire Wire Line
 	7025 3975 7825 3975
+$Comp
+L Connector_Generic:Conn_01x01 P3
+U 1 1 6116BED3
+P 3350 4175
+F 0 "P3" H 3350 4275 50  0000 C CNN
+F 1 "i2c-pin" V 3450 4175 50  0000 C CNN
+F 2 "kbd:1pin_conn" H 3350 4175 50  0001 C CNN
+F 3 "" H 3350 4175 50  0001 C CNN
+	1    3350 4175
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 P4
+U 1 1 6117108A
+P 3675 4175
+F 0 "P4" H 3675 4275 50  0000 C CNN
+F 1 "i2c-pin" V 3775 4175 50  0000 C CNN
+F 2 "kbd:1pin_conn" H 3675 4175 50  0001 C CNN
+F 3 "" H 3675 4175 50  0001 C CNN
+	1    3675 4175
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 P5
+U 1 1 61174AA2
+P 3975 4175
+F 0 "P5" H 3975 4275 50  0000 C CNN
+F 1 "i2c-pin" V 4075 4175 50  0000 C CNN
+F 2 "kbd:1pin_conn" H 3975 4175 50  0001 C CNN
+F 3 "" H 3975 4175 50  0001 C CNN
+	1    3975 4175
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 P6
+U 1 1 61174F05
+P 4275 4175
+F 0 "P6" H 4275 4275 50  0000 C CNN
+F 1 "i2c-pin" V 4375 4175 50  0000 C CNN
+F 2 "kbd:1pin_conn" H 4275 4175 50  0001 C CNN
+F 3 "" H 4275 4175 50  0001 C CNN
+	1    4275 4175
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3350 4375 3350 4600
+Wire Wire Line
+	3675 4375 3675 4575
+Wire Wire Line
+	3975 4375 3975 4575
+Wire Wire Line
+	4275 4375 4275 4575
+Text Label 3350 4525 0    50   ~ 0
+SDA
+Text Label 3675 4500 0    50   ~ 0
+SDA
+Text Label 3975 4500 0    50   ~ 0
+SCL
+Text Label 4275 4500 0    50   ~ 0
+SCL
+Wire Wire Line
+	900  1500 1100 1500
+Wire Wire Line
+	3300 3375 3500 3375
+Connection ~ 3300 3375
+Wire Wire Line
+	3500 3150 3500 3375
+Wire Wire Line
+	3300 3225 3425 3225
+Wire Wire Line
+	3425 3225 3425 3025
+Wire Wire Line
+	3425 3025 3500 3025
+Connection ~ 3300 3225
+Text Label 3200 3375 0    50   ~ 0
+B
+Text Label 3150 3225 0    50   ~ 0
+A
+Text Label 4150 2700 0    50   ~ 0
+TX
+Text Label 4150 2925 0    50   ~ 0
+RX
+Text Label 4150 3150 0    50   ~ 0
+TX
+Text Label 4150 3375 0    50   ~ 0
+RX
+Wire Wire Line
+	1100 1300 850  1300
+Wire Wire Line
+	1100 1200 850  1200
+Text Label 900  1200 0    50   ~ 0
+TX
+Text Label 900  1300 0    50   ~ 0
+RX
+Text Label 4150 2325 0    50   ~ 0
+LED
+Wire Wire Line
+	1100 2300 900  2300
+Text Label 950  2300 0    50   ~ 0
+BL
+Text Label 3325 2325 0    50   ~ 0
+BL
+$Comp
+L Device:Jumper_NO_Small JP13
+U 1 1 61380B25
+P 3775 2325
+F 0 "JP13" H 3775 2405 50  0000 C CNN
+F 1 " " H 3785 2265 50  0000 C CNN
+F 2 "kbd:Jumper" H 3775 2325 50  0001 C CNN
+F 3 "" H 3775 2325 50  0001 C CNN
+	1    3775 2325
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3875 2325 4325 2325
+Wire Wire Line
+	3275 2325 3675 2325
+$Comp
+L Device:Jumper_NO_Small JP14
+U 1 1 613B09C6
+P 3775 2175
+F 0 "JP14" H 3775 2255 50  0000 C CNN
+F 1 " " H 3785 2115 50  0000 C CNN
+F 2 "kbd:Jumper" H 3775 2175 50  0001 C CNN
+F 3 "" H 3775 2175 50  0001 C CNN
+	1    3775 2175
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3875 2175 3875 2325
+Connection ~ 3875 2325
+Wire Wire Line
+	3675 2175 3275 2175
+Text Label 3325 2175 0    50   ~ 0
+TX
+Wire Wire Line
+	3500 2700 3500 2925
+$Comp
+L Device:Jumper_NO_Small JP12
+U 1 1 613F67E1
+P 3800 3375
+F 0 "JP12" H 3800 3455 50  0000 C CNN
+F 1 " " H 3810 3315 50  0000 C CNN
+F 2 "kbd:Jumper" H 3800 3375 50  0001 C CNN
+F 3 "" H 3800 3375 50  0001 C CNN
+	1    3800 3375
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP11
+U 1 1 613F7220
+P 3800 3150
+F 0 "JP11" H 3800 3230 50  0000 C CNN
+F 1 " " H 3810 3090 50  0000 C CNN
+F 2 "kbd:Jumper" H 3800 3150 50  0001 C CNN
+F 3 "" H 3800 3150 50  0001 C CNN
+	1    3800 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP10
+U 1 1 613F7B4B
+P 3800 2925
+F 0 "JP10" H 3800 3005 50  0000 C CNN
+F 1 " " H 3810 2865 50  0000 C CNN
+F 2 "kbd:Jumper" H 3800 2925 50  0001 C CNN
+F 3 "" H 3800 2925 50  0001 C CNN
+	1    3800 2925
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP1
+U 1 1 613F8523
+P 3800 2700
+F 0 "JP1" H 3800 2780 50  0000 C CNN
+F 1 " " H 3810 2640 50  0000 C CNN
+F 2 "kbd:Jumper" H 3800 2700 50  0001 C CNN
+F 3 "" H 3800 2700 50  0001 C CNN
+	1    3800 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3900 3375 4325 3375
+Wire Wire Line
+	3700 3375 3500 3375
+Connection ~ 3500 3375
+Wire Wire Line
+	3700 3150 3500 3150
+Wire Wire Line
+	3900 3150 4325 3150
+Wire Wire Line
+	3900 2925 4325 2925
+Wire Wire Line
+	3700 2925 3500 2925
+Connection ~ 3500 2925
+Wire Wire Line
+	3500 2925 3500 3025
+Wire Wire Line
+	3500 2700 3700 2700
+Wire Wire Line
+	3900 2700 4325 2700
 $EndSCHEMATC
